@@ -46,7 +46,8 @@ header {
 }
 
 header .menu {
-  width: 64.58%;
+  width: 1240px;
+  min-width: 1240px;
   margin: 0 auto;
 }
 
@@ -250,7 +251,7 @@ header .trigger-menu span:nth-of-type(3) {
 }
 
 .f-1 > div {
-  width: 64.58%;
+  width: 1240px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,7 +531,7 @@ header .trigger-menu span:nth-of-type(3) {
 }
 
 .f-2 {
-  width: 64.58%;
+  width: 1240px;
   height: 184px;
   margin: 0 auto;
   color: #adadad;
@@ -694,20 +695,30 @@ main {
 .main-banner {
   width: 100%;
   height: 650px;
+  min-width: 1240px;
   overflow: hidden;
   position: relative;
 }
 
-.main-banner > p {
+.main-banner .banner-img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -100;
-  opacity: 100%;
+  opacity: .98;
 }
 
-.slide {
-  width: 64.58%;
+.main-banner .banner-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-banner .slide {
+  width: 1240px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,13 +739,13 @@ main {
   top: 40%;
 }
 
-.slide img {
+.main-banner .slide img {
   width: 24px;
   height: 37px;
 }
 
-.mb-text {
-  width: 64.58%;
+.main-banner .mb-text {
+  width: 1240px;
   margin: 0 auto;
   color: white;
   position: absolute;
@@ -742,7 +753,7 @@ main {
   bottom: 60px;
 }
 
-.mb-text p:nth-of-type(1) {
+.main-banner .mb-text p:nth-of-type(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,12 +762,12 @@ main {
           align-items: center;
 }
 
-.mb-text p:nth-of-type(1) span:nth-of-type(1) {
+.main-banner .mb-text p:nth-of-type(1) span:nth-of-type(1) {
   font-family: 'Nanum Myeongjo', serif !important;
   font-size: 18px;
 }
 
-.mb-text p:nth-of-type(1) span:nth-of-type(2) {
+.main-banner .mb-text p:nth-of-type(1) span:nth-of-type(2) {
   font-family: 'Nanum Myeongjo', serif !important;
   font-size: 14px;
   color: #62523f;
@@ -765,7 +776,7 @@ main {
   background-color: #f1e3c4;
 }
 
-.mb-text h4 {
+.main-banner .mb-text h4 {
   font-family: 'Nanum Myeongjo', serif !important;
   font-size: 36px;
   font-weight: 400;
@@ -774,7 +785,7 @@ main {
   position: relative;
 }
 
-.mb-text h4::after {
+.main-banner .mb-text h4::after {
   content: '';
   border: 0.5px solid white;
   opacity: 50%;
@@ -784,16 +795,16 @@ main {
   bottom: -8px;
 }
 
-.mb-text p:nth-of-type(2) {
+.main-banner .mb-text p:nth-of-type(2) {
   opacity: 80%;
 }
 
-.mb-text p:nth-of-type(2) span:nth-of-type(1) {
+.main-banner .mb-text p:nth-of-type(2) span:nth-of-type(1) {
   margin-right: 20px;
   position: relative;
 }
 
-.mb-text p:nth-of-type(2) span:nth-of-type(1)::after {
+.main-banner .mb-text p:nth-of-type(2) span:nth-of-type(1)::after {
   content: '';
   border: 0.5px solid white;
   opacity: 50%;
@@ -803,7 +814,7 @@ main {
   bottom: 0;
 }
 
-.mb-text p:nth-of-type(2) span:nth-of-type(3) {
+.main-banner .mb-text p:nth-of-type(2) span:nth-of-type(3) {
   font-size: 12px;
   padding: 8px 20px;
   border: 4px solid #f1e3c4;
@@ -813,7 +824,7 @@ main {
 }
 
 .resurch {
-  width: 64.58%;
+  width: 1240px;
   margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -867,31 +878,31 @@ main {
   bottom: -4px;
 }
 
-.r1 {
+.resurch .r1 {
   width: 240px;
 }
 
-.r1 p {
+.resurch .r1 p {
   position: relative;
 }
 
-.r1 p input {
+.resurch .r1 p input {
   border: 0;
 }
 
-.r1 p img {
+.resurch .r1 p img {
   width: 14px;
   position: absolute;
   right: 20px;
   top: 4px;
 }
 
-.r7 img, .r8 img {
+.resurch .r7 img, .resurch .r8 img {
   width: 12px;
   margin-left: 8px;
 }
 
-.r9 {
+.resurch .r9 {
   width: 138px;
   height: 60px;
   color: white;
@@ -902,7 +913,7 @@ main {
 }
 
 .line-banner {
-  width: 64.58%;
+  width: 1240px;
   height: 56px;
   margin: 40px auto;
   background-color: #f2f2f2;
@@ -980,7 +991,7 @@ section p {
 }
 
 .special-oppers {
-  width: 64.58%;
+  width: 1240px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1055,7 +1066,7 @@ section p {
   top: 0;
 }
 
-.more {
+.special-oppers .more {
   margin: 0 20px;
   position: absolute;
   right: 0;
@@ -1064,12 +1075,12 @@ section p {
   color: #4a433b;
 }
 
-.more::after {
+.special-oppers .more::after {
   content: '+';
   margin-left: 8px;
 }
 
-.so-1 {
+.special-oppers .so-1 {
   width: 792px;
   height: 360px;
   padding: 20px;
@@ -1077,7 +1088,7 @@ section p {
   position: relative;
 }
 
-.so-1 a > span {
+.special-oppers .so-1 a > span {
   width: 120px;
   height: 36px;
   color: white;
@@ -1089,7 +1100,7 @@ section p {
   background-color: #3e2b2c;
 }
 
-.so-1 p:nth-of-type(1) {
+.special-oppers .so-1 p:nth-of-type(1) {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1111,33 +1122,33 @@ section p {
   bottom: 10%;
 }
 
-.so-1 p:nth-of-type(1) span:nth-of-type(1) {
+.special-oppers .so-1 p:nth-of-type(1) span:nth-of-type(1) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-1 p:nth-of-type(1) span:nth-of-type(2) {
+.special-oppers .so-1 p:nth-of-type(1) span:nth-of-type(2) {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.so-1 p:nth-of-type(1) span:nth-of-type(3) {
+.special-oppers .so-1 p:nth-of-type(1) span:nth-of-type(3) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-1 p:nth-of-type(2) {
+.special-oppers .so-1 p:nth-of-type(2) {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
 }
 
-.so-2 {
+.special-oppers .so-2 {
   width: 386px;
   height: 100%;
   margin-top: 18px;
@@ -1146,7 +1157,7 @@ section p {
   position: relative;
 }
 
-.so-2 a > span {
+.special-oppers .so-2 a > span {
   width: 120px;
   height: 36px;
   color: white;
@@ -1158,7 +1169,7 @@ section p {
   background-color: #3e2b2c;
 }
 
-.so-2 p:nth-of-type(1) {
+.special-oppers .so-2 p:nth-of-type(1) {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1180,33 +1191,33 @@ section p {
   bottom: 10%;
 }
 
-.so-2 p:nth-of-type(1) span:nth-of-type(1) {
+.special-oppers .so-2 p:nth-of-type(1) span:nth-of-type(1) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-2 p:nth-of-type(1) span:nth-of-type(2) {
+.special-oppers .so-2 p:nth-of-type(1) span:nth-of-type(2) {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.so-2 p:nth-of-type(1) span:nth-of-type(3) {
+.special-oppers .so-2 p:nth-of-type(1) span:nth-of-type(3) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-2 p:nth-of-type(2) {
+.special-oppers .so-2 p:nth-of-type(2) {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
 }
 
-.so-3 {
+.special-oppers .so-3 {
   width: 386px;
   height: 100%;
   margin-top: 18px;
@@ -1215,7 +1226,7 @@ section p {
   position: relative;
 }
 
-.so-3 a > span {
+.special-oppers .so-3 a > span {
   width: 120px;
   height: 36px;
   color: white;
@@ -1227,7 +1238,7 @@ section p {
   background-color: #3e2b2c;
 }
 
-.so-3 p:nth-of-type(1) {
+.special-oppers .so-3 p:nth-of-type(1) {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1249,33 +1260,33 @@ section p {
   bottom: 10%;
 }
 
-.so-3 p:nth-of-type(1) span:nth-of-type(1) {
+.special-oppers .so-3 p:nth-of-type(1) span:nth-of-type(1) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-3 p:nth-of-type(1) span:nth-of-type(2) {
+.special-oppers .so-3 p:nth-of-type(1) span:nth-of-type(2) {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.so-3 p:nth-of-type(1) span:nth-of-type(3) {
+.special-oppers .so-3 p:nth-of-type(1) span:nth-of-type(3) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-3 p:nth-of-type(2) {
+.special-oppers .so-3 p:nth-of-type(2) {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
 }
 
-.so-4 {
+.special-oppers .so-4 {
   width: 100%;
   height: 260px;
   margin-bottom: 18px;
@@ -1284,7 +1295,7 @@ section p {
   position: relative;
 }
 
-.so-4 a > span {
+.special-oppers .so-4 a > span {
   width: 120px;
   height: 36px;
   color: white;
@@ -1296,7 +1307,7 @@ section p {
   background-color: #3e2b2c;
 }
 
-.so-4 p:nth-of-type(1) {
+.special-oppers .so-4 p:nth-of-type(1) {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1318,33 +1329,33 @@ section p {
   bottom: 10%;
 }
 
-.so-4 p:nth-of-type(1) span:nth-of-type(1) {
+.special-oppers .so-4 p:nth-of-type(1) span:nth-of-type(1) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-4 p:nth-of-type(1) span:nth-of-type(2) {
+.special-oppers .so-4 p:nth-of-type(1) span:nth-of-type(2) {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.so-4 p:nth-of-type(1) span:nth-of-type(3) {
+.special-oppers .so-4 p:nth-of-type(1) span:nth-of-type(3) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-4 p:nth-of-type(2) {
+.special-oppers .so-4 p:nth-of-type(2) {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
 }
 
-.so-5 {
+.special-oppers .so-5 {
   width: 100%;
   height: 360px;
   padding: 20px;
@@ -1352,7 +1363,7 @@ section p {
   position: relative;
 }
 
-.so-5 a > span {
+.special-oppers .so-5 a > span {
   width: 120px;
   height: 36px;
   color: white;
@@ -1364,7 +1375,7 @@ section p {
   background-color: #3e2b2c;
 }
 
-.so-5 p:nth-of-type(1) {
+.special-oppers .so-5 p:nth-of-type(1) {
   color: #3e2b2c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1386,26 +1397,26 @@ section p {
   bottom: 10%;
 }
 
-.so-5 p:nth-of-type(1) span:nth-of-type(1) {
+.special-oppers .so-5 p:nth-of-type(1) span:nth-of-type(1) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-5 p:nth-of-type(1) span:nth-of-type(2) {
+.special-oppers .so-5 p:nth-of-type(1) span:nth-of-type(2) {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.so-5 p:nth-of-type(1) span:nth-of-type(3) {
+.special-oppers .so-5 p:nth-of-type(1) span:nth-of-type(3) {
   font-size: 12px;
   font-family: 'Nanum Myeongjo', serif !important;
   font-weight: bold;
 }
 
-.so-5 p:nth-of-type(2) {
+.special-oppers .so-5 p:nth-of-type(2) {
   position: absolute;
   left: 0;
   top: 0;
@@ -1435,8 +1446,8 @@ section p {
   position: relative;
 }
 
-.ms-1 {
-  width: 64.58%;
+.membership .ms-1 {
+  width: 1240px;
   margin: 0 auto;
   margin-bottom: 20px;
   display: -webkit-box;
@@ -1456,7 +1467,7 @@ section p {
       flex-wrap: nowrap;
 }
 
-.ms-1 > div {
+.membership .ms-1 > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,7 +1485,7 @@ section p {
       flex-wrap: nowrap;
 }
 
-.ms-1 p {
+.membership .ms-1 p {
   margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1493,28 +1504,28 @@ section p {
       flex-wrap: nowrap;
 }
 
-.ms-1 p span:nth-of-type(1) {
+.membership .ms-1 p span:nth-of-type(1) {
   font-size: 18px;
   color: #62523f;
 }
 
-.ms-1 p span:nth-of-type(2) {
+.membership .ms-1 p span:nth-of-type(2) {
   font-size: 12px;
   color: #856f56;
 }
 
-.ms-1 img {
+.membership .ms-1 img {
   width: 54px;
   margin: 4px 8px;
 }
 
-.ms-2 {
-  width: 64.58%;
+.membership .ms-2 {
+  width: 1240px;
   margin: 0 auto;
   position: relative;
 }
 
-.ms-2 span:nth-of-type(2) {
+.membership .ms-2 span:nth-of-type(2) {
   color: #856f56;
   font-size: 12px;
   text-decoration: underline;
@@ -1523,24 +1534,32 @@ section p {
   top: 28px;
 }
 
-.ms-3 p:nth-of-type(1) {
-  position: absolute;
-  right: calc(50% - 500px);
-  top: 45%;
+.membership .ms-3 {
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.ms-3 p:nth-of-type(2) {
+.membership .ms-3 p:nth-of-type(1) {
+  position: absolute;
+  right: 120px;
+  top: -120px;
+}
+
+.membership .ms-3 p:nth-of-type(2) {
+  width: 100px;
+  text-align: center;
   color: white;
   font-size: 12px;
   background: #3e2b2c;
   padding: 10px;
   position: absolute;
-  right: calc(50% - 500px);
-  top: 70%;
+  right: 100px;
+  bottom: -12px;
 }
 
 .gallery {
-  width: 64.58%;
+  width: 1240px;
   margin: 0 auto;
   margin-bottom: 140px;
   display: -webkit-box;

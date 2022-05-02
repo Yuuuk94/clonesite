@@ -43,7 +43,7 @@ $smallscreen: 1024px;
 $tablet: 767px;
 $mobile: 320px;
 
-$w: 64.58%; // 1240px
+$w: 1240px; // 64.58%
 $m: 0 auto;
 $m-i: 0 20px;
 $hh-pc: 90px;
@@ -72,6 +72,7 @@ header{
     z-index: 500;
     .menu{
         width: $w;
+        min-width: $w;
         margin: $m;
         >div{
             margin: $m-i;

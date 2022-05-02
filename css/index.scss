@@ -5,83 +5,92 @@ main{
 }
 .main-banner{
     width: 100%; height: 650px;
+    min-width: $w;
     overflow: hidden;
     position: relative;
-    >p{
+    .banner-img{
+        width: 100%; height: 100%;
         position: absolute;
         left: 0; top: 0;
         z-index: -100;
-        opacity: 100%;
+        opacity: .98;
+        img{
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
     }
-}
-.slide{
-    width: $w;
-    @include flex(row, space-between, center, nowrap);
-    img{width: 24px; height: 37px;}
-    position: absolute;
-    left: calc(50% - 600px); top: 40%;
-}
-.mb-text{
-    width: $w;
-    margin: $m;
-    color: $wh;
-    position: absolute;
-    left: calc(50% - 600px); bottom: 60px;
-    p:nth-of-type(1){
-        display: flex;
-        align-items: center;
-        span:nth-of-type(1){
+    .slide{
+        width: $w;
+        @include flex(row, space-between, center, nowrap);
+        img{
+            width: 24px; height: 37px;
+        }
+        position: absolute;
+        left: calc(50% - 600px); top: 40%;
+    }
+    .mb-text{
+        width: $w;
+        margin: $m;
+        color: $wh;
+        position: absolute;
+        left: calc(50% - 600px); bottom: 60px;
+        p:nth-of-type(1){
+            display: flex;
+            align-items: center;
+            span:nth-of-type(1){
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-size: 18px;
+            }
+            span:nth-of-type(2){
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-size: 14px;
+                color: $m-t;
+                margin-left:8px;
+                padding: 4px 10px;
+                background-color: $h-b;
+            }
+        }
+        h4 {
             font-family: 'Nanum Myeongjo', serif !important;
-            font-size: 18px;
-        }
-        span:nth-of-type(2){
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-size: 14px;
-            color: $m-t;
-            margin-left:8px;
-            padding: 4px 10px;
-            background-color: $h-b;
-        }
-    }
-    h4 {
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-size: 36px;
-        font-weight: 400;
-        margin: 16px 0 24px 0;
-        display: inline-block;
-        position: relative;
-        &::after{
-            content: '';
-            border: .5px solid $wh;
-            opacity: 50%;
-            width: 100%;
-            position: absolute;
-            left: 0; bottom: -8px;
-        }
-    }
-    p:nth-of-type(2){
-        opacity: 80%;
-        span:nth-of-type(1){
-            margin-right: 20px;
+            font-size: 36px;
+            font-weight: 400;
+            margin: 16px 0 24px 0;
+            display: inline-block;
             position: relative;
             &::after{
                 content: '';
                 border: .5px solid $wh;
                 opacity: 50%;
-                height: 20px;
+                width: 100%;
                 position: absolute;
-                right: -12px; bottom: 0;
+                left: 0; bottom: -8px;
             }
         }
-        span:nth-of-type(3){
-            font-size: 12px;
-            padding: 8px 20px;
-            border: 4px solid $h-b;
-            position: absolute;
-            right: 0; bottom: 20px;
+        p:nth-of-type(2){
+            opacity: 80%;
+            span:nth-of-type(1){
+                margin-right: 20px;
+                position: relative;
+                &::after{
+                    content: '';
+                    border: .5px solid $wh;
+                    opacity: 50%;
+                    height: 20px;
+                    position: absolute;
+                    right: -12px; bottom: 0;
+                }
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                padding: 8px 20px;
+                border: 4px solid $h-b;
+                position: absolute;
+                right: 0; bottom: 20px;
+            }
         }
     }
 }
+
 .resurch{
     width: $w; margin: 40px auto;
     @include flex (row, space-between, center, nowrap);
@@ -101,34 +110,34 @@ main{
         position: absolute;
         left: 0; bottom: -4px;
     }
-}
-.r1{
-    width: 240px;
-    p{
-        position: relative;
-        input{
-            border: 0;
+    .r1{
+        width: 240px;
+        p{
+            position: relative;
+            input{
+                border: 0;
+            }
+            img{
+                width: 14px;
+                position: absolute;
+                right: 20px; top: 4px;
+            }
         }
+    }
+    .r7, .r8{
         img{
-            width: 14px;
-            position: absolute;
-            right: 20px; top: 4px;
+            width: 12px;
+            margin-left: 8px;
         }
     }
-}
-.r7, .r8{
-    img{
-        width: 12px;
-        margin-left: 8px;
+    .r9{
+        width: 138px; height: 60px;
+        color: $wh;
+        font-size: 12px;
+        text-align: center;
+        padding: 16px;
+        background-color: $m-btn;
     }
-}
-.r9{
-    width: 138px; height: 60px;
-    color: $wh;
-    font-size: 12px;
-    text-align: center;
-    padding: 16px;
-    background-color: $m-btn;
 }
 .line-banner{
     width: $w; height: 56px;
@@ -204,293 +213,299 @@ section{
         position: absolute;
         left: 67.5%; top: 0;
     }
-}
-.more{
-    margin: 0 20px;
-    position: absolute;
-    right: 0; top: 100px;
-    font-size: 12px;
-    color: $logo;
-    &::after{
-        content: '+';
-        margin-left: 8px;
-    }
-}
-.so-1{
-    width: $sw1; height: $sh1;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    a>span{
-        width: 120px; height: 36px;
-        color: $wh;
+    .more{
+        margin: 0 20px;
+        position: absolute;
+        right: 0; top: 100px;
         font-size: 12px;
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-        background-color: $m-btn;
+        color: $logo;
+        &::after{
+            content: '+';
+            margin-left: 8px;
+        }
     }
-    p:nth-of-type(1){
-        color: $wh;
-        @include flex (column, center, left, nowrap);
-        position: absolute;
-        left: 30px; bottom: 10%;
-        span:nth-of-type(1){
+    .so-1{
+        width: $sw1; height: $sh1;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+        a>span{
+            width: 120px; height: 36px;
+            color: $wh;
             font-size: 12px;
             font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px;
+            background-color: $m-btn;
         }
-        span:nth-of-type(2){
-            font-size: 20px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-            margin: 10px 0;
+        p:nth-of-type(1){
+            color: $wh;
+            @include flex (column, center, left, nowrap);
+            position: absolute;
+            left: 30px; bottom: 10%;
+            span:nth-of-type(1){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
         }
-        span:nth-of-type(3){
+        p:nth-of-type(2){
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
+        }
+    }
+    .so-2{
+        width: $sw2; height: 100%;
+        margin-top: 18px;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+        a>span{
+            width: 120px; height: 36px;
+            color: $wh;
             font-size: 12px;
             font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px;
+            background-color: $m-btn;
+        }
+        p:nth-of-type(1){
+            color: $wh;
+            @include flex (column, center, left, nowrap);
+            position: absolute;
+            left: 30px; bottom: 10%;
+            span:nth-of-type(1){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+        }
+        p:nth-of-type(2){
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
         }
     }
-    p:nth-of-type(2){
-        position: absolute;
-        left: 0; top: 0;
-        z-index: -1;
-    }
-}
-.so-2{
-    width: $sw2; height: 100%;
-    margin-top: 18px;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    a>span{
-        width: 120px; height: 36px;
-        color: $wh;
-        font-size: 12px;
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-        background-color: $m-btn;
-    }
-    p:nth-of-type(1){
-        color: $wh;
-        @include flex (column, center, left, nowrap);
-        position: absolute;
-        left: 30px; bottom: 10%;
-        span:nth-of-type(1){
+    .so-3{
+        width: $sw2; height: 100%;
+        margin-top: 18px;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+        a>span{
+            width: 120px; height: 36px;
+            color: $wh;
             font-size: 12px;
             font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px;
+            background-color: $m-btn;
         }
-        span:nth-of-type(2){
-            font-size: 20px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-            margin: 10px 0;
+        p:nth-of-type(1){
+            color: $wh;
+            @include flex (column, center, left, nowrap);
+            position: absolute;
+            left: 30px; bottom: 10%;
+            span:nth-of-type(1){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
         }
-        span:nth-of-type(3){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
+        p:nth-of-type(2){
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
         }
     }
-    p:nth-of-type(2){
-        position: absolute;
-        left: 0; top: 0;
-        z-index: -1;
+    .so-4{
+        width: 100%; height: $sh2;
+        margin-bottom: 18px;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+        a>span{
+            width: 120px; height: 36px;
+            color: $wh;
+            font-size: 12px;
+            font-family: 'Nanum Myeongjo', serif !important;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px;
+            background-color: $m-btn;
+        }
+        p:nth-of-type(1){
+            color: $wh;
+            @include flex (column, center, left, nowrap);
+            position: absolute;
+            left: 30px; bottom: 10%;
+            span:nth-of-type(1){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+        }
+        p:nth-of-type(2){
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
+        }
+    }
+    .so-5{
+        width: 100%; height: $sh1;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+        a>span{
+            width: 120px; height: 36px;
+            color: $wh;
+            font-size: 12px;
+            font-family: 'Nanum Myeongjo', serif !important;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px;
+            background-color: $m-btn;
+        }
+        p:nth-of-type(1){
+            color: $m-btn;
+            @include flex (column, center, left, nowrap);
+            position: absolute;
+            left: 30px; bottom: 10%;
+            span:nth-of-type(1){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            span:nth-of-type(3){
+                font-size: 12px;
+                font-family: 'Nanum Myeongjo', serif !important;
+                font-weight: bold;
+            }
+        }
+        p:nth-of-type(2){
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
+        }
     }
 }
 
-.so-3{
-    width: $sw2; height: 100%;
-    margin-top: 18px;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    a>span{
-        width: 120px; height: 36px;
-        color: $wh;
-        font-size: 12px;
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-        background-color: $m-btn;
-    }
-    p:nth-of-type(1){
-        color: $wh;
-        @include flex (column, center, left, nowrap);
-        position: absolute;
-        left: 30px; bottom: 10%;
-        span:nth-of-type(1){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-        span:nth-of-type(2){
-            font-size: 20px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        span:nth-of-type(3){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-    }
-    p:nth-of-type(2){
-        position: absolute;
-        left: 0; top: 0;
-        z-index: -1;
-    }
-}
-.so-4{
-    width: 100%; height: $sh2;
-    margin-bottom: 18px;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    a>span{
-        width: 120px; height: 36px;
-        color: $wh;
-        font-size: 12px;
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-        background-color: $m-btn;
-    }
-    p:nth-of-type(1){
-        color: $wh;
-        @include flex (column, center, left, nowrap);
-        position: absolute;
-        left: 30px; bottom: 10%;
-        span:nth-of-type(1){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-        span:nth-of-type(2){
-            font-size: 20px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        span:nth-of-type(3){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-    }
-    p:nth-of-type(2){
-        position: absolute;
-        left: 0; top: 0;
-        z-index: -1;
-    }
-}
-.so-5{
-    width: 100%; height: $sh1;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    a>span{
-        width: 120px; height: 36px;
-        color: $wh;
-        font-size: 12px;
-        font-family: 'Nanum Myeongjo', serif !important;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px;
-        background-color: $m-btn;
-    }
-    p:nth-of-type(1){
-        color: $m-btn;
-        @include flex (column, center, left, nowrap);
-        position: absolute;
-        left: 30px; bottom: 10%;
-        span:nth-of-type(1){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-        span:nth-of-type(2){
-            font-size: 20px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        span:nth-of-type(3){
-            font-size: 12px;
-            font-family: 'Nanum Myeongjo', serif !important;
-            font-weight: bold;
-        }
-    }
-    p:nth-of-type(2){
-        position: absolute;
-        left: 0; top: 0;
-        z-index: -1;
-    }
-}
 .membership{
     width: 100%; padding-bottom: 80px;
     margin-bottom: 80px;
     background-color: $l-b;
     @include flex (column, center, stretch, nowrap);
     position: relative;
-}
-.ms-1{
-    width: $w; margin: $m;
-    margin-bottom: 20px;
-    @include flex(row, left, stretch, nowrap);
-    >div{
-        @include flex(row, space-between, start, nowrap)
-    }
-    p{
-        margin-right: 40px;
-        @include flex (column, center, left, nowrap);
-        span:nth-of-type(1){
-            font-size: 18px;
-            color:$m-t;
+    .ms-1{
+        width: $w; margin: $m;
+        margin-bottom: 20px;
+        @include flex(row, left, stretch, nowrap);
+        >div{
+            @include flex(row, space-between, start, nowrap)
         }
+        p{
+            margin-right: 40px;
+            @include flex (column, center, left, nowrap);
+            span:nth-of-type(1){
+                font-size: 18px;
+                color:$m-t;
+            }
+            span:nth-of-type(2){
+                font-size: 12px;
+                color: $m-st;
+            }
+        }
+        img{
+            width: 54px;
+            margin: 4px 8px;
+        }
+    }
+    .ms-2{
+        width: $w; margin: $m;
+        position: relative;
         span:nth-of-type(2){
-            font-size: 12px;
             color: $m-st;
+            font-size: 12px;
+            text-decoration: underline;
+            position: absolute;
+            left: 58%; top: 28px;
         }
     }
-    img{
-        width: 54px;
-        margin: 4px 8px;
+    .ms-3{
+        width: $w; 
+        margin: $m;
+        position: relative;
+        p:nth-of-type(1){
+            position: absolute;
+            right: 120px; top: -120px;
+        }
+        p:nth-of-type(2){
+            width: 100px;
+            text-align: center;
+            color: $wh;
+            font-size: 12px;
+            background: $m-btn;
+            padding: 10px;
+            position: absolute;
+            right: 100px; bottom: -12px;
+        }
     }
 }
-.ms-2{
-    width: $w; margin: $m;
-    position: relative;
-    span:nth-of-type(2){
-        color: $m-st;
-        font-size: 12px;
-        text-decoration: underline;
-        position: absolute;
-        left: 58%; top: 28px;
-    }
-}
-.ms-3{
-    p:nth-of-type(1){
-        position: absolute;
-        right: calc(50% - 500px); top: 45%;
-    }
-    p:nth-of-type(2){
-        color: $wh;
-        font-size: 12px;
-        background: $m-btn;
-        padding: 10px;
-        position: absolute;
-        right: calc(50% - 500px); top: 70%;
-    }
-}
+
 .gallery{
     width: $w; margin: $m;
     margin-bottom: 140px;
