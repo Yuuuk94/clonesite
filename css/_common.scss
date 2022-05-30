@@ -43,7 +43,7 @@ $smallscreen: 1024px;
 $tablet: 767px;
 $mobile: 320px;
 
-$w: 1240px; // 64.58%
+$w: 1240px; // 1240px 64.58%
 $m: 0 auto;
 $m-i: 0 20px;
 $hh-pc: 90px;
@@ -72,7 +72,6 @@ header{
     z-index: 500;
     .menu{
         width: $w;
-        min-width: $w;
         margin: $m;
         >div{
             margin: $m-i;
@@ -131,7 +130,7 @@ header{
             @include flex(row, space-between, center, nowrap);
             li{
                 margin-top: 46px;
-                padding-bottom: 19px;
+                padding-bottom: 20px;
             }
         }
         h1{
@@ -166,13 +165,12 @@ header{
             &::after{
                 content:'';
                 width: 100%;
-                border: 2px solid $m-btn;
+                border: 3px solid $m-btn;
                 position: absolute;
-                left:0; bottom: 0;
-                opacity: 0;
+                left:0; bottom: -6px;
             }
             &:hover::after{
-                opacity: 100;
+                bottom: 0;
             }
         }
     }
