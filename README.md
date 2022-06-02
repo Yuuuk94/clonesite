@@ -1,5 +1,11 @@
 # 호텔 웹사이트 퍼블리싱
 
+개인프로젝트
+
+
+HTML, CSS / SCSS
+
+
 ### 데모보기 : https://yuuuk94.github.io/hotel-website/
 
 ## 개요
